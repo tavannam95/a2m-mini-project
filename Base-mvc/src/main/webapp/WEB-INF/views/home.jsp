@@ -12,10 +12,9 @@
 </head>
 
 <body>
-<h1>Trang chủ</h1>
-<h1>Menu</h1>
-
-<%-- <%@ include file="menu.jsp" %> --%>
+	<a href="">Sản phẩm</a>
+    <a href="">Danh mục</a>
+    <a href="">Người dùng</a>
 </body>
 
 </html>
