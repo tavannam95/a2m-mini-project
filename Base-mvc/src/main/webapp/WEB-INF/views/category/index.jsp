@@ -22,6 +22,7 @@
 			<tr>
 				<th>Category Id</th>
 				<th>Name</th>
+				<th>Action</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -33,6 +34,11 @@
 			<tr>
 				<td><%=u.getCategoryId() %></td>
 				<td><%=u.getName() %></td>
+				<td>
+					<a href="/Base-mvc/category/delete/<%=u.getCategoryId() %>">Delete</a>
+					<a href="/Base-mvc/category/edit/<%=u.getCategoryId() %>">Edit</a>
+				</td>
+				
 			</tr>
 		
 		
