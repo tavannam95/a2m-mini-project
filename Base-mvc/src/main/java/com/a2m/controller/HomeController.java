@@ -19,4 +19,6 @@ public class HomeController {
 	      ModelAndView mav = new ModelAndView("springmvc");
 	      return mav;
 	   }
+	   
+	   //aloalo
 }
