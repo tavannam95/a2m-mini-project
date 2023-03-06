@@ -15,7 +15,7 @@
     <h1>Nhóm 1</h1>
 	<a href="">Sản phẩm</a>
     <a href="/Base-mvc/category">Danh mục</a>
-    <a href="">Người dùng</a>
+    <a href="/Base-mvc/UserPage">Người dùng</a>
 </body>
 
 </html>
