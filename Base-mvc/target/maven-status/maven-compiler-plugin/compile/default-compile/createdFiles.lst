@@ -1,0 +1,7 @@
+com\a2m\dao\CategoryDAO.class
+com\a2m\controller\CreateController.class
+com\a2m\controller\HomeController.class
+com\a2m\dto\Category.class
+Service\Person.class
+com\a2m\controller\UserController.class
+com\a2m\controller\CategoryController.class
