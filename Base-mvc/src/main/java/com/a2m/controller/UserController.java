@@ -72,4 +72,16 @@ public class UserController {
 		model.addAttribute("persons", persons);
 		return "redirect:/UserPage";
 	}
+	
+	@GetMapping(value = "Del/{ID}")
+	public String Userdel(@PathVariable("ID") String id, Model model) {
+		for(Person p: persons) {
+			if(p.getId().equalsIgnoreCase(id)) {
+				persons.remove(p);
+				break;
+			}
+		}
+		model.addAttribute("persons", persons);
+		return "redirect:/UserPage";
+	}
 }

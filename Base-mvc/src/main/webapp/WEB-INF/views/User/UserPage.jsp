@@ -22,6 +22,10 @@
         <tr>
           <td>${person.id}</td>
           <td>${person.name}</td>
+          <td>
+          	<a href = "Edit/${person.id}">Edit</a>
+          	<a href = "Del/${person.id}">Del</a>
+          </td>
         </tr>
         </c:forEach>
       </table>
