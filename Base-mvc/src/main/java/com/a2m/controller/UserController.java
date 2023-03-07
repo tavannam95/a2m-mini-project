@@ -22,12 +22,14 @@ import Service.Person;
 @Controller
 public class UserController {
 
+	//tạo list user
 	public static ArrayList<Person> persons = new ArrayList<>();
 	static {
 		persons.add(new Person("A", "B"));
 		persons.add(new Person("C", "D"));
 	}
 
+	//hiển thị trang userPage
 	@RequestMapping(value = "/UserPage", method = RequestMethod.GET)
 	public ModelAndView categoryPage() {
 		ModelAndView mav = new ModelAndView("User/UserPage");
@@ -35,11 +37,13 @@ public class UserController {
 		return mav;
 	}
 
+	//hiển thị trang CreateUser
 	@GetMapping(value = "create")
 	public String CreateUserPage() {
 		return "User/CreateUser";
 	}
 
+	//Thêm User và quay trở lại trang UserPage
 	@PostMapping(value = "insert", params = "add")
 	public String insertUser(@RequestParam("ID") String id, @RequestParam("Name") String name, Model model) {
 		Person person = new Person(id, name);
@@ -48,6 +52,7 @@ public class UserController {
 		return "User/UserPage";
 	}
 
+	//hiển thị thông tin user cần sửa theo ID trong trang UserEdit
 	@RequestMapping(value = "Edit/{ID}", method = RequestMethod.GET)
 	public ModelAndView EditUser(@PathVariable("ID") String id) {
 		for (Person p : persons) {
@@ -61,6 +66,7 @@ public class UserController {
 		return null;
 	}
 
+	//thực hiện thay đổi thông tin User và quay trờ lại trang UserPage
 	@PostMapping(value = "Edit", params = "update")
 	public String Edit(@RequestParam("ID") String id, @RequestParam("Name") String name, Model model) {
 		for (Person p : persons) {
@@ -73,6 +79,7 @@ public class UserController {
 		return "redirect:/UserPage";
 	}
 	
+	//thực hiện xóa User theo ID
 	@GetMapping(value = "Del/{ID}")
 	public String Userdel(@PathVariable("ID") String id, Model model) {
 		for(Person p: persons) {
