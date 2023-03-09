@@ -10,7 +10,7 @@
 <h1>Edit category</h1>
 	<form action="/Base-mvc/category/create" method="post">
 		<label for="">Mã danh mục:</label>
-        <input type="text" name="categoryId" value="${ categoryId }"> <br>
+        <input type="text" name="categoryId" value="${ categoryId }" readonly> <br>
 		<label for="">Tên danh mục: </label>
         <input type="text" name="name" value="${ name }"> <br>
         <button type="submit">Update</button>
